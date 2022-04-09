@@ -82,4 +82,4 @@ func main() {
 实验结果，不管是读取连接队列还是连接后读取消息，都是阻塞的，也就是
 `fmt.Printf("Connected from %v\n",conn.RemoteAddr())`在没有连接的时候没有持续打印，且`fmt.Println("No messages,unblocked")`在没有消息发送的时候也没有持续打印。因为如果内核是非阻塞的，那么这两行语句应该是持续打印的。
 ## 在Linux中
-编译完成后推送到linux系统，实验结果和windows中一样。但是linux内核是可以设置非阻塞的，去查看go "net" 包源代码，看是否调动内核socket功能的时候使其非阻塞的设置。
+编译完成后推送到linux系统，实验结果和windows中一样。但是linux内核是可以设置非阻塞的，去查看go "net" 包源代码，查看在调用linux内核socket时，是否可以将其设置为非阻塞。
