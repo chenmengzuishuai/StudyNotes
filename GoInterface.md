@@ -82,4 +82,4 @@ func main(){
 ```
  syntax error: unexpected ), expecting type
 ```
-说明在常规的结构体中是不可以把函数作为字段来使用的（这不是废话吗，要不然设计者为啥要设计一个interface作为一个特殊的结构体来声明）。退一步说，go语言中本身也没有类似`this`、`self`值类的关键字来指向实例本身。所以go语言要在结构体声明之外按照`func(param struct) name (param Type) returnType`的方法来实现某种方法。
+说明在常规的结构体中是不可以把函数作为字段来使用的（这不是废话吗，要不然设计者为啥要设计一个interface作为一个特殊的结构体来声明）。退一步说，go语言中本身也没有类似`this`、`self`之类的关键字来指向实例本身。所以go语言要在结构体声明之外按照`func(param struct) name (param Type) returnType`的方法来实现某种方法。
